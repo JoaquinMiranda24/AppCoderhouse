@@ -1,0 +1,159 @@
+                
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url("../images/darkfondo.jpg") ; /* Cambia 'ruta/a/la/imagen.jpg' por la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        /* Estilos para la barra de navegación */
+        .navbar {
+             overflow: hidden;
+             background-color: #333;
+        }
+            
+        .navbar a {
+             float: left;
+             display: block;
+             color: #f2f2f2;
+             text-align: center;
+             padding: 14px 20px;
+             text-decoration: none;
+        }
+            
+        .navbar a:hover {
+             background-color: #ddd;
+             color: black;
+        }
+        
+
+        .container {
+            background-color: rgba(26, 1, 33, 0.8); /* Agrega un fondo semi-transparente al contenedor para mejorar la legibilidad del contenido */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        input[type="text"],
+        input[type="password"]
+        
+                                  {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        
+        .boton1 {
+            width: 100%;
+            background-color: #070b87;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton2                                   
+                                  {
+            width: 100%;
+            background-color: #15b2c4;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .boton1:hover {
+            background-color: #11064a;
+        }
+
+        .boton2:hover {
+            background-color: #02415b;
+        }
+
+        /* aca empieza style de articulos.html */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5cd2dd;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #82b7ed;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dividir en cuadros de igual tamaño */
+            grid-gap: 20px; /* Espacio entre cuadros */
+        }
+        .product {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .product p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+        /*le doy estilo al contendor de registro.html */
+        #register {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:rgba(1, 36, 18, 0.5); /* Cambia el último valor (0.5) para ajustar la transparencia */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dividir en cuadros de igual tamaño */
+            grid-gap: 20px; /* Espacio entre cuadros */
+        }
+
+        #container_div {
+            display: grid;
+            grid-template-columns: 40fr 40fr; /* Divide en dos partes iguales */
+        }
+
+        #division {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+            justify-content: space-between; /* Distribuye los elementos con el mismo espacio entre ellos */
+        }
+
+
+

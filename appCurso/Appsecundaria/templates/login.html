@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<body>
+    <h1>INICIE SESION O REGISTRESE PARA COMENZAR A VENDER TUS PRODUCTOS!</h1>
+    <div class="navbar">
+        <a href="{% url 'lista' %}">Volver</a>
+    </div>
+
+        <div class="container">
+            <h1>Iniciar sesion o Registrarse!</h1>
+            <form>
+                <input type="text" placeholder="Nombre de usuario" required>
+                <input type="password" placeholder="Contrasena" required>
+                <input type="submit" value="Entrar" class="boton1"> 
+
+            </form>
+
+                <a href="{% url 'venta' %}">Ingresar</a>
+                
+            
+                <a href="{% url 'registro' %}">Registro</a>
+            
+        </div> 
+</body>
+
+
+{% endblock %}

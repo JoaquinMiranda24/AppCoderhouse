@@ -1,0 +1,97 @@
+body {
+    background-color: #eed1d1; /* Color de fondo para el espacio en blanco */
+    /* background-image: url("../assets/images/darkfondo.jpg") ;  */
+    background-size: 50% auto; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+}
+
+
+header, footer {
+    width: 100%; /* Ancho completo del contenedor */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Color de texto blanco */
+    padding: 20px; /* Espaciado interno */
+}
+
+footer {
+    text-align: center; /* Centra el texto del pie de página */
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.logo {
+    /* Cambia la imagen de fondo */
+    background-image: url('../assets/images/capy.jpg');
+    /* Ajusta el tamaño de la imagen */
+    background-size: cover;
+    /* Ajusta la posición de la imagen */
+    background-position: center;
+    /* Añade un tamaño fijo al div */
+    width: 200px;
+    height: 200px;
+}
+
+/* Oculta el contenido del dropdown por defecto */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Estilo del enlace que abre el dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Opcional: ajusta el estilo del enlace del dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Opcional: cambia el color del enlace al pasar el mouse */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+.container {
+    max-width: 960px; /* Ancho máximo para el contenido */
+    margin: auto; /* Centrar el contenido horizontalmente */
+    padding: 10px; /* Espacio alrededor del contenido */
+  }
+
+
+.ultimos {
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 50%; /* Ancho del div */
+    padding: 20px; /* Espacio alrededor del contenido */
+    text-align: center; /* Centrar el contenido dentro del div */
+}
+
+table {
+    margin: 0 auto; /* Centrar la tabla horizontalmente */
+    width: 80%; /* Ancho de la tabla */
+}
+  
+  /* Estilos para centrar los elementos de la tabla */
+th, td {
+    text-align: center; /* Centrar el texto dentro de las celdas */
+}
+
+.botones {
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: 50%; /* Ancho del div */
+    padding: 20px; /* Espacio alrededor del contenido */
+    text-align: center; /* Centrar el contenido dentro del div */
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<body>
+    
+    <button><a href="{% url 'lista' %}">Volver</a></button>
+
+    <h1>Carrito de Compras</h1>
+
+    <ul>
+        {% for producto in productos_en_carrito %}
+            <li>
+                <strong>Artículo:</strong> {{ producto.Articulo }} <br>
+                <strong>Descripción:</strong> {{ producto.Descripcion }} <br>
+                <strong>Precio:</strong> {{ producto.Precio }} <br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+
+{% endblock %}

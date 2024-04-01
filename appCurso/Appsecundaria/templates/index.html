@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Mia</title>
+    <link rel="stylesheet" href="{% static 'Appsecundaria/css/css2.css' %}">
+    
+</head>
+<body>
+    <header class="container">
+        <div class="logo">
+            <img>
+        </div>
+        <h1>Somos Carpincho y Ave ,tus amigos de compras y ventas!</h1>
+    </header>
+
+    {% block contenido %}
+    <main>
+        <p>RECURRIMOS A INDEX PARA OTRAS VISTAS.</p>
+        <!-- Puedes añadir más elementos según sea necesario -->
+    </main>
+   
+
+    {% endblock %}
+
+
+    <!-- Pie de página -->
+    <footer class="container">
+        <div class="redes-sociales">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Carpincho y Ave. Todos los derechos reservados.</p>
+    </footer>
+
+
+</body>
+</html>
+
+
+

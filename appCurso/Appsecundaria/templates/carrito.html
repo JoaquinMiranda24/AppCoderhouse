@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<button><a href="{% url 'lista' %}">Volver</a></button>
+
+<button><a href="#">Pagar</a></button>
+
+<h1>ARTICULO AGREGADO!</h1>
+
+<!-- <p>Articulo</p> -->
+{{producto.Articulo}}
+<!-- <p>Precio</p> -->
+{{producto.Precio}}
+
+    
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="botones">
+<button><a href="{% url 'casa' %}">Volver</a></button>
+<button><a href="{% url 'carga' %}">Vender un producto!</a></button>
+<button><a href="{% url 'mostrar_carrito' %}">Ver carrito</a></button>
+</div>
+
+<div class="container">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Articulo</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for n in productos %}
+       
+        <tr>
+
+          <td>{{n.Articulo}}</td>
+          <td>{{n.Descripcion}}</td>
+          <td>{{n.Precio}}</td>
+          <td><button><a href="{% url 'agregaral_carrito' n.id %}">Agregar al carrito</a></button></td>
+            
+        </tr>
+       
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+  
+
+
+
+{% endblock %}

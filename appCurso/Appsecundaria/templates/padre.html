@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a mi pagina!</title>
+    <link rel="stylesheet" href="{% static 'Appsecundaria/css/css2.css' %}"> <!-- Enlaza tu archivo de estilos CSS -->
+</head>
+<body>
+    <!-- Encabezado con logo y nombre de la empresa -->
+    <header class="container">
+        <div class="logo">
+            <img>
+        </div>
+        <h1>Somos Carpincho y Ave ,tus amigos de compras y ventas!</h1>
+    </header>
+    
+
+<aside>
+    <nav>
+        <ul>
+              <li class="dropdown">
+                  <a href="#">Que desea hacer?</a>
+
+                    <div class="dropdown-content">
+                     <a href="{% url 'lista' %}">Ver Lista productos</a>
+                     <a href="{% url 'iniciasesion' %}">Iniciar sesion</a>
+                     <a href="{% url 'registro' %}">Registro</a>
+
+                    <!-- Agrega más opciones de venta si es necesario -->
+                   </div>
+              </li>
+        </ul>
+    </nav>
+    
+</aside>
+
+<div class="ultimos">
+  <main>
+
+   {% block contenido %}
+
+    <p>Ultimos articulos publicados pueden ir aca.</p>
+ 
+   {% endblock %}
+
+  </main>
+
+</div>
+   
+<!-- Pie de página -->
+    <footer class="container">
+        <div class="redes-sociales">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Carpincho y Ave. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

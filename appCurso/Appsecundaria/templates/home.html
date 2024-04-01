@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<h1>ULTIMOS PRODUCTOS AGREGADOS!</h1>
+
+<div class="productos">
+    <!-- Ejemplo de un producto -->
+    
+    <div class="producto">
+
+        {% for n in productos %}
+         <h2>{{n.Articulo}}</h2>
+         <p>{{n.Descripcion}}</p>
+         <p>{{n.Precio}}</p>
+        {% endfor %}
+
+    </div>
+    
+    <!-- Puedes añadir más productos aquí según sea necesario -->
+</div>
+
+
+
+
+{% endblock %}

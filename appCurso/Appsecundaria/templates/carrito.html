@@ -5,16 +5,21 @@
 
 {% block contenido %}
 
-<button><a href="{% url 'lista' %}">Volver</a></button>
+<button><a href="{% url 'lista' %}">Seguir de compras o volver!</a></button>
 
-<button><a href="#">Pagar</a></button>
+<button><a href="{% url 'mostrar_carrito' %}">Ir a carrito</a></button>
 
 <h1>ARTICULO AGREGADO!</h1>
 
-<!-- <p>Articulo</p> -->
-{{producto.Articulo}}
-<!-- <p>Precio</p> -->
-{{producto.Precio}}
+ <div id="barra-lateral">
+  <!-- <p>Articulo</p> -->
+  {{producto.Articulo}}
+  <!-- <p>Precio</p> -->
+  {{producto.Precio}}
+
+  
+
+ </div>
 
     
 {% endblock %}

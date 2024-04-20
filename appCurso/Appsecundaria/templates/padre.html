@@ -13,20 +13,46 @@
         <div class="logo">
             <img>
         </div>
-        <h1>Somos Carpincho y Ave ,tus amigos de compras y ventas!</h1>
+        <h1>Somos Carpincho y Ave ,expertos en compras y ventas!</h1>
+        <div>
+        {% if request.user.is_authenticated %}
+                   <img src="{{url}}" alt="" width="50" height="50">
+                   <p>Bienvenido {{usuario}} </p>
+                   {% endif %}
+        {% if not request.user.is_authenticated %}
+                   <p>Bienvenido Visitante! </p>
+                   {% endif %}
+        </div>
+
     </header>
     
 
-<aside>
+<aside id="mi_aside">
     <nav>
         <ul>
               <li class="dropdown">
-                  <a href="#">Que desea hacer?</a>
+                  
+
+                  <a href="#">Que desea hacer? </a>
+
 
                     <div class="dropdown-content">
                      <a href="{% url 'lista' %}">Ver Lista productos</a>
-                     <a href="{% url 'iniciasesion' %}">Iniciar sesion</a>
+                     {% if not request.user.is_authenticated %}
+                     <a href="{% url 'login_user' %}">Iniciar sesion</a>
+                     {% endif %}
+                     {% if not request.user.is_authenticated %}
                      <a href="{% url 'registro' %}">Registro</a>
+                     {% endif %}
+                     {% if request.user.is_authenticated %}
+                     <form method="post" action="{% url 'Logout' %}">
+                        {% csrf_token %}
+                        <button type="submit">Cerrar sesion!</button>
+                     </form>
+                     {% endif %}
+                     {% if request.user.is_authenticated %}
+                     <a href="{% url 'editar_user' %}">Editar perfil</a>
+                     {% endif %}
 
                     <!-- Agrega más opciones de venta si es necesario -->
                    </div>
@@ -42,6 +68,7 @@
    {% block contenido %}
 
     <p>Ultimos articulos publicados pueden ir aca.</p>
+    
  
    {% endblock %}
 

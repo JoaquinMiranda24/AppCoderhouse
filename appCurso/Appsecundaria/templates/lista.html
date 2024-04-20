@@ -30,6 +30,15 @@
           <td>{{n.Descripcion}}</td>
           <td>{{n.Precio}}</td>
           <td><button><a href="{% url 'agregaral_carrito' n.id %}">Agregar al carrito</a></button></td>
+
+          {% if request.user.is_authenticated %}
+          <td><button><a href="#">Editar articulo</a></button></td>
+          {% endif %}
+
+          {% if request.user.is_authenticated %}
+          <td><button><a href="{% url 'elimina' n.id %}">Eliminar articulo</a></button></td>
+          {% endif %}
+
             
         </tr>
        
@@ -37,6 +46,7 @@
     </tbody>
   </table>
 </div>
+
   
 
 

@@ -4,7 +4,10 @@
 {% load static %}
 
 {% block contenido %}
-
+{% if request.user.is_authenticated %}
+<img src="{{url}}" alt="" width="50" height="50">
+{% endif %}
+<h1>{{usuario}}</h1>
 <h1>ULTIMOS PRODUCTOS AGREGADOS!</h1>
 
 <div class="productos">

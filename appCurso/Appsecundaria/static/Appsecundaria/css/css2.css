@@ -95,3 +95,9 @@ th, td {
     padding: 20px; /* Espacio alrededor del contenido */
     text-align: center; /* Centrar el contenido dentro del div */
 }
+
+.mi_aside {
+    width: 100%;
+    float: left;
+    /* Ajusta otros estilos según sea necesario */
+}

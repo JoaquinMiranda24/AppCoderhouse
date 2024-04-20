@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<body>
+
+    <h1>INICIE SESION PARA COMENZAR A VENDER TUS PRODUCTOS!</h1>
+    
+
+    <div class="navbar">
+        <a href="{% url 'casa' %}">Volver</a>
+    </div>
+   
+
+    <h2>Ingrese sus datos: </h2>
+        <form action="" method="POST">
+            
+          {% csrf_token %}
+
+          {{form.as_p}}
+
+         <button>Enviar</button>
+        
+        </form>
+
+
+</body>
+
+
+{% endblock %}

@@ -13,9 +13,14 @@
 <body>
     <button><a href="{% url 'casa' %}">Volver</a></button>
 
-    <h1>NUEVO USUARIO CREADO!!!!</h1>
+    {% if request.user.is_authenticated %}
+    <img src="{{url}}" alt="">
+    <p>Bienvenido {{usuario}} </p>
+    {% endif %}
 
     
+
+
 </body>
 </html>
 

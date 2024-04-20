@@ -6,16 +6,19 @@
 
 <button><a href="{% url 'casa' %}">Volver</a></button>
 
-<form action="alta_usuario" method="post">
+<h1>Cree su usuario ya mismo! no seas b*#*"*</h1>
+
+<form action="" method="post">
+
 {% csrf_token %}
 
-<p>Nombre usuario o empresa</p>
-<input type="text" name="nombre" required>
-<p>Ingrese su mail</p>
-<input type="text" name="email" required>
-<p>Cree su clave</p>
-<input type="number" name="clave" >
-<button>Enviar</button>
+{{form.as_p}}
+
+<div>
+
+ <button>Registrar usuario</button>
+
+</div>
 
 </form>
 

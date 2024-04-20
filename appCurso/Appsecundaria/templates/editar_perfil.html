@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<body>
+   
+    <button><a href="{% url 'casa' %}">Volver</a></button>
+
+    <div class="container-fluid">
+
+        <h2>{{usuario}} modifique sus datos!</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <table>
+                {{miFormulario.as_table}}
+            </table>
+
+            <button>Enviar</button>
+
+        </form>
+    </div>
+
+
+</body>
+
+
+{% endblock %}

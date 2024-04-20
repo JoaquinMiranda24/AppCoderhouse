@@ -14,11 +14,15 @@
     <ul>
         {% for producto in productos_en_carrito %}
             <li>
+                
                 <strong>Artículo:</strong> {{ producto.Articulo }} <br>
                 <strong>Descripción:</strong> {{ producto.Descripcion }} <br>
                 <strong>Precio:</strong> {{ producto.Precio }} <br>
+                <td><button><a href="{% url 'borra_articulo' producto.id %}">Borrar articulo</a></button></td>
             </li>
         {% endfor %}
+        <h2>Precio total : {{total_precio}} </h2>
+        <td><button><a href="#">Comprar!</a></button></td>
     </ul>
 </body>
 

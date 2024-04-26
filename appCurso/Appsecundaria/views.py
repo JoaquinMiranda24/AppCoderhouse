@@ -1,5 +1,5 @@
-from django.http import request , HttpResponse
-from django.shortcuts import render , redirect
+from django.http import request , HttpResponse , HttpResponseRedirect
+from django.shortcuts import render , redirect , get_object_or_404
 from Appsecundaria.models import Vender , ProductoEnCarrito ,Avatar
 from Appsecundaria.forms import vender_articulos , seleccion_articulos , AgregarAlCarritoForm , UserEditForm
 from django.template import loader
@@ -226,6 +226,25 @@ def editar_user(request):
 
     return render(request , "editar_perfil.html" , {"miFormulario":miFormulario , "usuario": usuario})
 
+def modificar_articulo(request, id):
+    # Obtener el objeto que se desea modificar
+    producto = get_object_or_404(Vender, id=id)
+
+    if request.method == 'POST':
+        # Si se envió un formulario con los datos actualizados
+        # Actualizar los atributos del objeto con los datos del formulario
+        producto.Articulo = request.POST.get('Articulo')
+        producto.Precio = request.POST.get('Precio')
+        producto.Descripcion = request.POST.get('Descripcion')
+        # Guardar los cambios en la base de datos
+        producto.save()
+        # Redirigir a una página de confirmación o a donde desees
+        return HttpResponseRedirect("lista.html")
+    else:
+        # Si es una solicitud GET, renderizar el formulario de edición
+        return render(request, "modificar_articulos.html", {'producto': producto})
+
+  
 
    
 

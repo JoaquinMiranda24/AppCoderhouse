@@ -6,7 +6,7 @@
 
 <button><a href="{% url 'lista' %}">Volver</a></button>
 
-<form action="Modificar" method="POST">
+<form action="alta_articulos" method="POST">
 {% csrf_token %}
 
 <p>Articulo</p>
@@ -15,10 +15,6 @@
 <input type="text" name="Descripcion" required>
 <p>Precio</p>
 <input type="number" name="Precio" >
-<p>imagen</p>
-<input type="image" name="image" >
-<button>Enviar</button>
-
 </form>
 
 {% endblock %}

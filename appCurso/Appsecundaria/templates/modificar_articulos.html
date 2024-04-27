@@ -6,7 +6,7 @@
 
 <button><a href="{% url 'lista' %}">Volver</a></button>
 
-<form action="alta_articulos" method="POST">
+<form action="" method="POST">
 {% csrf_token %}
 
 <p>Articulo</p>
@@ -15,6 +15,11 @@
 <input type="text" name="Descripcion" required>
 <p>Precio</p>
 <input type="number" name="Precio" >
+<div>
+
+    <button>Listo!</button>
+   
+   </div>
 </form>
 
 {% endblock %}

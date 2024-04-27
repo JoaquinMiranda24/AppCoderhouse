@@ -32,7 +32,7 @@
           <td><button><a href="{% url 'agregaral_carrito' n.id %}">Agregar al carrito</a></button></td>
 
           {% if request.user.is_authenticated %}
-          <td><button><a href="{% url 'Modificar' n.id %}">Editar articulo</a></button></td>
+          <td><button><a href="{% url 'editar_articulo' n.id %}">Editar articulo</a></button></td>
           {% endif %}
 
           {% if request.user.is_authenticated %}

@@ -18,7 +18,6 @@ urlpatterns = [
     path('registro' , views.registro , name = 'registro'),
     path('logout' , LogoutView.as_view(template_name="logout.html") , name="Logout"),
     path('editar_user', views.editar_user , name='editar_user'),
-    path('modificar/<int:id>', views.modificar_articulo , name="Modificar") #url para modificar articulos cuando usuario este logueado
+    path('modificar/<int:id>', views.modificar_articulo , name="Modificare") #url para modificar articulos cuando usuario este logueado
    
    ]
-

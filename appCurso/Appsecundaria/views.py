@@ -226,7 +226,6 @@ def editar_user(request):
 
     return render(request , "editar_perfil.html" , {"miFormulario":miFormulario , "usuario": usuario})
 
-
 def modificar_articulo(request, id):
     # Obtener el objeto que se desea modificar
     producto = get_object_or_404(Vender, id=id)
@@ -240,7 +239,8 @@ def modificar_articulo(request, id):
         # Guardar los cambios en la base de datos
         producto.save()
         # Redirigir a una página de confirmación o a donde desees
-        return render(request , "editado.html")
+        #return HttpResponseRedirect("lista.html")
+        return render(request, "editado.html", {'producto': producto})
     else:
         # Si es una solicitud GET, renderizar el formulario de edición
         return render(request, "modificar_articulos.html", {'producto': producto})
